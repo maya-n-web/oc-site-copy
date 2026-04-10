@@ -3,17 +3,179 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="コーポレーションサイトについて">
-  <title></title>
-  <link rel="icon" href="images/favicon.ico">
-  <link rel="stylesheet" href="css/reset.css">
+  <title>WED | 渋谷にあるWeb制作会社</title>
+  <meta name="description" content="コーポレーションサイト">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="img/favicon.ico" alt="WED">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+    rel="stylesheet">
 </head>
 
+<!-- 
+コンテンツ幅
+メインビジュアルとAboutは全幅で他は1000pxです。
+ヘッダー
+右上の「お問い合わせ」ボタンは、スマホ表示の場合は非表示にします。
+メインビジュアル
+全幅で高さは画面下に合わせます。
+各セクションのタイトル
+英字タイトルと日本語タイトルで記述します。
+英字タイトルは「letter-spacing」で文字の間隔を少し広くします。
+News
+ニュースエリアを3分割して、間に罫線を引きます。
+日付はtimeタグを使用してみましょう。
+About
+全幅で表示します。
+画像の高さは400px固定です。
+Business
+高さをずらした横並び配置です。
+スマホ表示の画像の並び順を確認した上で、適切なコーディングを考えてみましょう。
+Company
+横幅は1000pxで、画像を上に重ねます。
+画像の高さは400px固定です。
+レスポンシブ
+ブレークポイントは900pxです。 -->
 
 <body>
+  <div class="wrapper">
+    <header id="header">
+      <a href="index.html"><img class="logo" src="img/logo.svg" alt="WED" width="100" height="50"></a>
 
+      <nav class="main-nav">
+        <ul class="nav-menu">
+          <li><a class="item" href="#news.html">NEWS</a></li>
+          <li><a class="item" href="#about.html">ABOUT</a></li>
+          <li><a class="item" href="#bus.html">BUSINESS</a></li>
+          <li><a class="item" href="#company.html">COMPANY</a></li>
+        </ul>
+
+
+        <a href="#contact.html">お問い合わせ</a>
+      </nav>
+    </header>
+
+
+
+    <main class="main">
+      <img class="hero-img" src="" alt="オフィスのイメージ画像" width="1400" height="500">
+
+      <div class="info">
+        <div class="info-2">
+          <h1 class="title">TOTALLY Short Sleeve Shirt</h1>
+          <p class="ex">テキストテキストテキスト
+            テキストテキストテキストテキスト
+            テキストテキストテキストテキストテキストテキス
+            トテキスト テキストテキストテキストテキストテキ
+            ストテキストテキスト テキストテキストテキストテキ
+            ストテキストテキストテキスト テキストテキストテキ
+            ストテキストテキストテキストテキスト テキストテキ
+            ストテキスト
+          </p>
+
+          <p class="font">￥9,999 +tax</p><br>
+
+          <table class="size-table">
+            <thead>
+              <tr>
+                <th>Color</th>
+                <th>Size</th>
+                <th class="last2"> </th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>White</td>
+                <td>S</td>
+                <td class="last2 wide-cell">
+                  <label for="quantity1"></label>
+                  <select class="last-select" name="quantity1" id="quantity1">
+                    <option value=" 1" selected="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td>White</td>
+                <td>M</td>
+                <td class="last2 wide-cell">
+                  <label for="quantity2"></label>
+                  <select name="quantity2" id="quantity2">
+                    <option value=" 1" selected="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+
+              <tr>
+                <td class="last">White</td>
+                <td class="last">L</td>
+                <td class="last last2 wide-cell">
+                  <label for="quantity3"></label>
+                  <select name="quantity3" id="quantity3">
+                    <option value="1" selected="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                  </select>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <a class="cart-button font" href="#header">ADD TO CART</a><br>
+
+          <table class="size-table2 font">
+            <thead>
+              <tr>
+                <th>Size</th>
+                <th>Chest</th>
+                <th>Weist</th>
+                <th>Height</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <th>S</th>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+              </tr>
+
+              <tr>
+                <th>M</th>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+              </tr>
+
+              <tr>
+                <th>L</th>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+                <td>99 ～ 99</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </main>
+
+
+    <footer class="footer">
+      <p><small>&copy; TOTALLY</small></p>
+    </footer>
+  </div>
 </body>
 
 </html>
