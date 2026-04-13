@@ -87,20 +87,18 @@ h2 {
 
 /* 写真 */
 .main_img {
-    width: 100%;
     max-width: 100%;
     height: auto;
-    aspect-ratio: 2/4;
+    aspect-ratio: 1/2;
     object-fit: cover;
     vertical-align: bottom;
 }
 
 .about_img {
     width: 100vw;
-    margin-left: -16px;
-    margin-right: -16px;
     max-width: none;
     height: auto;
+    margin-left: -16px;
     aspect-ratio: 5/4;
     object-fit: cover;
     vertical-align: bottom;
@@ -116,7 +114,7 @@ h2 {
 
 .sub_title {
     display: inline-block;
-    width: 28%;
+    width: 30%;
     border-bottom: 1px solid #000000;
     margin: 0px 0px 30px 0px;
     padding-bottom: 15px;
@@ -154,7 +152,7 @@ h2 {
 }
 
 .main_text {
-    line-height: 3rem;
+    line-height: 1.5;
     font-size: 1.5rem;
 }
 
@@ -164,13 +162,13 @@ h2 {
     max-width: 100%;
     height: auto;
     vertical-align: bottom;
-    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .list {
     font-weight: bold;
     font-size: 1.5rem;
-    padding: 1rem;
+    padding: 1em;
     position: relative; 
 }
 
@@ -181,7 +179,6 @@ h2 {
     left: 0;
     color: #000000;
     font-weight: bold;
-    margin-left: 0;
 }
 
 /* 会社情報 */
@@ -225,12 +222,12 @@ dd {
 }
 
 .last_info {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin-bottom: 30px;
 }
 
 .copy_right {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
 }
 
 /* デスクトップ用 */
