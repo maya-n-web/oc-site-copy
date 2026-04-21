@@ -13,6 +13,7 @@ body {
     font-style: normal;
     font-family: 'Noto Sans JP', sans-serif;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -20,7 +21,7 @@ body {
 }
 
 .eng_language {
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1rem;
 }
 
 li {
@@ -37,7 +38,7 @@ a {
 
 img {
     width: 100%;
-    max-width: 100%;
+    max-width: 1000px;
     height: auto;
     vertical-align: bottom;
 }
@@ -55,9 +56,9 @@ img {
 
 .logo {
     display: block;
-    max-width: 80px;
-    margin-bottom: 10px;
+    max-width: 100px;
     height: auto;
+    margin-bottom: 10px;
     line-height: 0;
 }
 
@@ -156,16 +157,21 @@ time::after {
     margin: 30px 10px 80px 10px;
 }
 
-.main_text {
+.about_text {
     line-height: 1.5;
     font-size: 1.5rem;
+}
+
+.about_img {
+    width: 100%;
+    max-height: 400px;
 }
 
 /* BUSINESS */
 
 
-.bus_list li .bus_img {
-    width: 100%;
+.bus_img {
+    width: 1000px;
     height: auto;
     vertical-align: bottom;
     margin: 20px 0;
@@ -222,6 +228,8 @@ time::after {
 
 .last_img {
     margin: 30px auto;
+    max-width: 1000px;
+    height: 400px;
     aspect-ratio: 1/1;
     object-fit: cover;
     z-index: 99;
@@ -262,51 +270,45 @@ time::after {
 ================================================= */
 @media(min-width: 900px) {
 
-    /* --- 共通・レイアウト --- */
-    .wrapper {
-        width: 100%;
-        padding: 0px;
-    }
-
-
-
     /* --- ヘッダー・ナビゲーション --- */
+
     .nav_wrapper {
-        width: 90%;
-        max-width: 1200px;
+        width: 100%;
         height: auto;
         display: flex;
         flex-direction: row;
-        align-items: center;
+        justify-content: space-between;
         gap: 35px;
-        margin: 0 0 0 10%;
+        margin: 0;
+
+    }
+
+    .nav_menu_left {
+        width: 80%;
+        display: flex;
+        align-items: center;
 
     }
 
     .logo {
-        margin: 0;
+        width: 100px;
         height: auto;
         line-height: 0;
+        margin-left: 30px;
     }
 
 
     .nav_menu_list {
-        width: 70%;
-        display: flex;
-        justify-content: left;
         gap: 25px;
-        line-height: 1;
-        font-size: 1.5rem;
-        font-weight: 500;
+        margin-left: 30px;
     }
 
     .contact {
-        width: 25%;
+        width: 20%;
         height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: 20%;
         font-size: 1.2rem;
         background-color: #000000;
         color: #ffffff;
@@ -320,6 +322,7 @@ time::after {
 
     /* --- メインビジュアル --- */
     .main_img {
+        width: 100%;
         aspect-ratio: 16 / 9;
         max-height: 90vh;
         object-fit: cover;
@@ -327,8 +330,6 @@ time::after {
 
     /* --- ニュースセクション --- */
     .news_wrapper {
-        display: flex;
-
         margin: 5% 10% 10% 10%;
         gap: 10px;
     }
@@ -366,27 +367,35 @@ time::after {
 
     /* --- ABOUTセクション --- */
     .about_wrapper {
-        position: relative;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 
     .about {
-        position: absolute;
-        width: 40%;
-        right: 30;
-        top: -50;
+        margin: 30px;
+        padding-top: 150px;
     }
 
+
     .about_img {
-        width: 40%;
-        aspect-ratio: 7 / 4;
-        max-height: 60vh;
+        display: block;
+        aspect-ratio: 1 / 1;
+        width: 100%;
+    }
+
+    .about_text {
+        line-height: 4;
+    }
+
+    .about .about_text:first-of-type {
+        padding-top: 15px;
     }
 
     /* --- BUSINESSセクション --- */
     .bus_wrapper {
         max-width: 1000px;
         margin: 0 auto;
-        overflow-x: hidden;
         /* 横スクロールを禁止 */
     }
 
@@ -408,6 +417,36 @@ time::after {
         align-items: start;
         margin: 0 auto;
         gap: 40px 60px;
+        grid-template-areas:
+
+            "...... area_b"
+            "...... area_b"
+            "area_a area_b"
+            /* 1行目：左にa、右は空き */
+            "area_a area_d"
+            /* 2行目：左にa、右にb */
+            "area_c area_d"
+            /* 3行目：左にc、右にb */
+            "area_c area_d"
+            /* 4行目：左にc、右にd */
+            "...... area_d";
+        /* 5行目：左は空き、右にd */
+    }
+
+    .area_a {
+        grid-area: area_a;
+    }
+
+    .area_b {
+        grid-area: area_b;
+    }
+
+    .area_c {
+        grid-area: area_c;
+    }
+
+    .area_d {
+        grid-area: area_d;
     }
 
     .list {
@@ -422,10 +461,7 @@ time::after {
     }
 
     /* 互い違いのレイアウト調整 */
-    .list:nth-child(2),
-    .list:nth-child(4) {
-        margin-top: -100px;
-    }
+
 
     .bus_img {
         width: 400px;
@@ -436,6 +472,63 @@ time::after {
     }
 
     /* --- 会社情報・フッター --- */
-    /* 必要に応じてここに追加 */
+    .company_wrapper {
+        width: 100%;
+    }
 
+    .company_back_ground {
+        background-color: #ffffff;
+        width: 60%;
+        height: 50%;
+        padding: 50px 50px;
+        margin: 0 0 30px 0;
+    }
+
+    .last_img_wrapper {
+        position: relative;
+    }
+
+
+    .last_img {
+        width: 60%;
+        height: auto;
+        position: absolute;
+        bottom: 150px;
+        right: 10px;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        z-index: 99;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    /* フッター */
+    .footer_wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        background-color: #ffffff;
+        padding: 50px 60px;
+        margin: 0px;
+    }
+
+    .footer_info {
+        display: flex;
+        justify-content: space-between;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .footer_last_info {
+        line-height: 1.5;
+        font-size: 1.4rem;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .copy_right {
+        font-size: 1.2rem;
+        padding-top: 30px;
+        margin-left: 30px;
+    }
 }
