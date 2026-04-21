@@ -83,7 +83,6 @@ h2 {
     letter-spacing: 1rem;
 }
 
-/* 写真 */
 .main_img {
     max-width: 100%;
     height: auto;
@@ -396,7 +395,6 @@ time::after {
     .bus_wrapper {
         max-width: 1000px;
         margin: 0 auto;
-        /* 横スクロールを禁止 */
     }
 
     .bus {
@@ -459,8 +457,6 @@ time::after {
     .list::before {
         display: none;
     }
-
-    /* 互い違いのレイアウト調整 */
 
 
     .bus_img {

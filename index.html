@@ -19,29 +19,30 @@
 <body>
   <header class="header" id="header">
     <nav class="nav_wrapper">
-      <h1 class="logo">
-        <a href="index.html">
-          <img src="img/logo.svg" alt="Web Entertainment Design" width="50" height="50">
-        </a>
-      </h1>
+      <div class="nav_menu_left">
+        <h1 class="logo">
+          <a href="index.html">
+            <img src="img/logo.svg" alt="Web Entertainment Design" width="100" height="26">
+          </a>
+        </h1>
 
-      <ul class="nav_menu_list">
-        <li><a href="#news">NEWS</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#bus">BUSINESS</a></li>
-        <li><a href="#company">COMPANY</a></li>
-      </ul>
+        <ul class="nav_menu_list">
+          <li class="eng_language"><a href="#news">NEWS</a></li>
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#bus">BUSINESS</a></li>
+          <li><a href="#company">COMPANY</a></li>
+        </ul>
+      </div>
       <a class="contact" href="#contact">お問い合わせ</a>
     </nav>
   </header>
 
   <main>
-    <img class="main_img" src="img/mainvisual.jpg" alt="オフィスのイメージ画像" loading="lazy" width="1400" height="600">
+    <img class="main_img" src="img/mainvisual.jpg" alt="オフィスのイメージ画像" loading="lazy" width="1000" height="400">
     <div class="wrapper">
-
       <section>
         <div class="news_wrapper">
-          <h2 id="news">NEWS</h2>
+          <h2 class="eng_language" id="news">NEWS</h2>
           <span class="sub_title">ニュース</span>
           <ul class="news_title">
             <li>
@@ -68,18 +69,18 @@
 
       <section>
         <div class="about_wrapper">
-          <img class="about_img" src="img/about.jpg" alt="イメージ画像" loading="lazy" width="1400" height="600">
+          <img class="about_img" src="img/about.jpg" alt="イメージ画像" loading="lazy" width="1000" height="400">
           <div class="about">
-            <h2 id="about">ABOUT</h2>
+            <h2 class="eng_language" id="about">ABOUT</h2>
             <span class="sub_title">私たちについて</span>
-            <p class="main_text">
+            <p class="about_text">
               テキストテキストテキストテキストテキストテキストテキストテキ
             </p>
-            <p class="main_text">
-              テキストテキストテキストテキストテキストテキストテキストテキキストテキストテキストテキス
+            <p class="about_text">
+              テキストテキストテキストテキストテキストテキストテキストテキ
             </p>
-            <p class="main_text">
-              テキストテキストテキストテキストテストテキストテキストトテキストトテキストトテキストトテキストトテキストトテキストトテキストトテキストテキス
+            <p class="about_text">
+              テキストテキストテキストテキストテキストテキストテキストテキ
             </p>
           </div>
         </div>
@@ -89,23 +90,25 @@
         <section>
           <div class="bus">
             <div class="bus_top">
-              <h2 id="bus">BUSINESS</h2>
+              <h2 class="eng_language" id="bus">BUSINESS</h2>
               <span class="sub_title">事業内容</span>
             </div>
             <ul class="bus_list">
-              <li>Web制作・マーケティング<br>
-                <img class="bus_img" src="img/business1.jpg" alt="ミーティングイメージ画像" loading="lazy" width="1000"
-                  height="933">
+              <li class="area_a">Web制作・マーケティング<br>
+                <img class="bus_img" src="img/business1.jpg" alt="ミーティングイメージ画像" loading="lazy" width="800" height="500">
               </li>
-              <li>プロモーション企画・制作<br>
-                <img class="bus_img" src="img/business3.jpg" alt="カメラの画像" loading="lazy" width="1000" height="933">
+
+              <li class="area_b">プロモーション企画・制作<br>
+                <img class="bus_img" src="img/business3.jpg" alt="カメラの画像" loading="lazy" width="800" height="500">
               </li>
-              <li>インターネットメディア事業<br>
-                <img class="bus_img" src="img/business2.jpg" alt="YouTubeのホーム画面" loading="lazy" width="1000"
-                  height="933">
+
+              <li class="area_c">インターネットメディア事業<br>
+                <img class="bus_img" src="img/business2.jpg" alt="YouTubeのホーム画面" loading="lazy" width="800"
+                  height="500">
               </li>
-              <li>ソーシャル企画・制作<br>
-                <img class="bus_img" src="img/business4.jpg" alt="アプリのアイコン" loading="lazy" width="1000" height="933">
+
+              <li class="area_d">ソーシャル企画・制作<br>
+                <img class="bus_img" src="img/business4.jpg" alt="アプリのアイコン" loading="lazy" width="800" height="500">
               </li>
             </ul>
           </div>
@@ -136,19 +139,19 @@
                 </div>
               </dl>
             </div>
+            <figure class="last_img_wrapper">
+              <img class="last_img" src="img/company.jpg" alt="オフィスのイメージ画像" loading="lazy" width="1000" height="400">
+            </figure>
           </div>
-          <figure>
-            <img class="last_img" src="img/company.jpg" alt="オフィスのイメージ画像" loading="lazy" width="1000" height="933">
-          </figure>
+        </section>
       </div>
-      </section>
     </div>
     </div>
   </main>
 
-  <footer class="footer wrapper">
+  <footer class="footer_wrapper">
     <div class="footer_info">
-      <img class="logo last_logo" src="img/logo.svg" alt="Web Entertainment Design" width="50" height="50">
+      <img class="logo last_logo" src="img/logo.svg" alt="Web Entertainment Design" width="100" height="26">
       <ul class="footer_last_info">
         <li>Web Entertainment Design Inc.</li>
         <li>West Building 3F</li>
